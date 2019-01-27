@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TTFBNativeAdView">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="251"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWa-C1-2gH" customClass="FBMediaView">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="191"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7X-I6-yFz" customClass="FBAdChoicesView">
+                    <rect key="frame" x="323" y="0.0" width="20" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="i7g-Ip-Y5Q"/>
+                        <constraint firstAttribute="height" constant="20" id="kyw-vY-nEi"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKa-aF-caM">
+                    <rect key="frame" x="60" y="201" width="193" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Ad Describe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uR1-vz-QKE">
+                    <rect key="frame" x="60" y="236.5" width="193" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7c-Vb-NHs">
+                    <rect key="frame" x="263" y="210" width="80" height="32"/>
+                    <color key="backgroundColor" red="1" green="0.019870941999999999" blue="0.038022657869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="OTr-Hn-Dwr"/>
+                        <constraint firstAttribute="width" constant="80" id="cP6-am-vCZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="btn">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VqU-lc-DcF" customClass="FBAdIconView">
+                    <rect key="frame" x="0.0" y="201" width="50" height="50"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="frI-aI-CfQ"/>
+                        <constraint firstAttribute="height" constant="50" id="lcc-S9-WD6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="uR1-vz-QKE" firstAttribute="leading" secondItem="VqU-lc-DcF" secondAttribute="trailing" constant="10" id="1Ga-Lp-INq"/>
+                <constraint firstItem="VqU-lc-DcF" firstAttribute="top" secondItem="xWa-C1-2gH" secondAttribute="bottom" constant="10" id="5Rp-jo-heq"/>
+                <constraint firstItem="uR1-vz-QKE" firstAttribute="bottom" secondItem="VqU-lc-DcF" secondAttribute="bottom" id="DbK-lw-Vt6"/>
+                <constraint firstItem="b7X-I6-yFz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Q7Q-OR-re0"/>
+                <constraint firstItem="xWa-C1-2gH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QDe-i6-40W"/>
+                <constraint firstAttribute="trailing" secondItem="b7X-I6-yFz" secondAttribute="trailing" id="SJi-Pi-uKA"/>
+                <constraint firstItem="h7c-Vb-NHs" firstAttribute="centerY" secondItem="VqU-lc-DcF" secondAttribute="centerY" id="Usa-mm-VgX"/>
+                <constraint firstAttribute="trailing" secondItem="h7c-Vb-NHs" secondAttribute="trailing" id="V8w-ex-0V0"/>
+                <constraint firstItem="h7c-Vb-NHs" firstAttribute="leading" secondItem="uR1-vz-QKE" secondAttribute="trailing" constant="10" id="cbX-1S-6sq"/>
+                <constraint firstItem="uKa-aF-caM" firstAttribute="top" secondItem="VqU-lc-DcF" secondAttribute="top" id="dH6-DQ-MRN"/>
+                <constraint firstItem="h7c-Vb-NHs" firstAttribute="leading" secondItem="uKa-aF-caM" secondAttribute="trailing" constant="10" id="iWo-tz-rgm"/>
+                <constraint firstItem="VqU-lc-DcF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kWd-ft-76a"/>
+                <constraint firstAttribute="bottom" secondItem="VqU-lc-DcF" secondAttribute="bottom" id="nA2-q8-Ce8"/>
+                <constraint firstAttribute="trailing" secondItem="xWa-C1-2gH" secondAttribute="trailing" id="oG9-vO-B0g"/>
+                <constraint firstItem="uKa-aF-caM" firstAttribute="leading" secondItem="VqU-lc-DcF" secondAttribute="trailing" constant="10" id="xVC-OQ-VxF"/>
+                <constraint firstItem="xWa-C1-2gH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yVK-rR-qXd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="adActionButton" destination="h7c-Vb-NHs" id="ApW-kb-DIW"/>
+                <outlet property="adBodyLabel" destination="uR1-vz-QKE" id="52h-rW-6L7"/>
+                <outlet property="adChoicesView" destination="b7X-I6-yFz" id="QtH-wu-rJ9"/>
+                <outlet property="adIconView" destination="VqU-lc-DcF" id="0bs-qm-1Ws"/>
+                <outlet property="adMediaView" destination="xWa-C1-2gH" id="EGI-Pc-41A"/>
+                <outlet property="adTitleLabel" destination="uKa-aF-caM" id="InG-aM-99b"/>
+            </connections>
+            <point key="canvasLocation" x="-199" y="305"/>
+        </view>
+    </objects>
+</document>

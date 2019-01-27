@@ -1,0 +1,72 @@
+//
+//  PrefixHeader.pch
+//  Horoscope
+//
+//  Created by PanZhi on 2018/4/19.
+//  Copyright © 2018年 xykj.inc All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+// 代码混淆头文件,必须在最前边导入
+#import "TTCodeObfuscation.h"
+
+
+#import "UtilsMacro.h"
+#import "ConfigMacro.h"
+#import "FontMacro.h"
+
+#import <Masonry/Masonry.h>
+#import <MJExtension/MJExtension.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import <AFNetworking/AFNetworking.h>
+#import <FBAudienceNetwork/FBAudienceNetwork.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
+#import <YYText/YYText.h>
+#import <YYModel/YYModel.h>
+#import <YGCrashHelper/YGCrashHelper.h>
+#import <FBSDKCoreKit.h>
+#import <Bugly/Bugly.h>
+#import <Firebase.h>
+#import <Bolts.h>
+
+#import <XTOOLAPP_LIBRARY/XYAdObject.h>
+#import <XTOOLAPP_LIBRARY/XYAdBaseManager.h>
+#import <XTOOLAPP_LIBRARY/XYAdConfiguration.h>
+#import <XTOOLAPP_LIBRARY/NSDictionary+DeleteNull.h>
+#import <XTOOLAPP_LIBRARY/XYLogManager.h>
+#import <XTOOLAPP_LIBRARY/XYLogDataHelper.h>
+#import <XTOOLAPP_LIBRARY/XYAdEventManager.h>
+#import <XTOOLAPP_LIBRARY/XYDeepLinkTools.h>
+
+
+#import "TTAdManager.h"
+
+#import "TTPaymentManager.h"
+#import "TTBaseTools.h"
+#import "MSWeakTimer.h"
+#import "TTManager.h"
+#import "TTRequestTool.h"
+#import "TTLoadingHUD.h"
+
+#import "UIViewController+TimeStamp.h"
+#import "NSString+NetworkState.h"
+#import "UIView+YGNib.h"
+#import "UIImage+Color.h"
+#import "UIViewController+Current.h"
+#import "TTDataHelper.h"
+#import "UIImageView+WebCache.h"
+#import "UIColor+XYColor.h"
+#import "UIView+category.h"
+#import "UIAlertController+Extension.h"
+
+
+#endif
+
+#endif /* PrefixHeader_pch */

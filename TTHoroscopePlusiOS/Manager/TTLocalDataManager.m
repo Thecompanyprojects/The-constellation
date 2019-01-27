@@ -1,0 +1,233 @@
+//
+//  XYLocalDataManager.m
+//  Horoscope
+//
+//  Created by zhang ming on 2018/4/26.
+//  Copyright © 2018年 xykj.inc All rights reserved.
+//
+
+#import "TTLocalDataManager.h"
+
+@implementation TTLocalDataManager
+
+- (NSArray<TTZodiacItemModel *> *)zodiacSignModels{
+    if (!_zodiacSignModels) {
+        _zodiacSignModels = [self dataArray];
+    }return _zodiacSignModels;
+}
+
+- (NSArray<TTZodiacItemModel *> *)dataArray{
+    /*
+     1.20——2.18 水瓶座
+     2.19——3.20 双鱼座
+     3.21——4.19 白羊座
+     4.20——5.20 金牛座
+     5.21——6.20 双子座
+     6.21——7.22 巨蟹座
+     7.23——8.22 狮子座
+     8.23——9.22 处女座
+     9.23——10.22 天秤座
+     10.23——11.21 天蝎座
+     11.22——12.21 射手座
+     12.22——1.19摩羯座
+     */
+    
+    NSArray* dict = @[
+                      @{@"imageName":@"白羊座_topImage",
+//                      @"imageName":@"dailyAries",
+                        @"zodiacName":@"Aries",
+                        @"titleImageName":@"符号 牧羊",
+                        @"titleImageNameA":@"白羊-星座",
+                        @"transparentImageName":@"白羊座",
+                        @"dateString":@"03/21 ~ 04/19",
+                        @"zodiacIndex":@"1",
+                        @"backgroundImage":@"火象星座",
+                        @"colorHexNum":@"0x3FB933"},
+                      @{
+                          @"imageName":@"金牛座_topImage",
+//                          @"imageName":@"dailyTaurus",
+                        @"zodiacName":@"Taurus",
+                        @"titleImageName":@"符号 金牛",
+                        @"titleImageNameA":@"金牛-星座",
+                        @"transparentImageName":@"金牛座",
+                        @"dateString":@"04/20 ~ 05/20",
+                        @"zodiacIndex":@"2",
+                          @"backgroundImage":@"土象星座",
+                        @"colorHexNum":@"0xD2B000"},
+                      @{@"imageName":@"双子座_topImage",
+//                          @"imageName":@"dailyGemini",
+                        @"zodiacName":@"Gemini",
+                        @"titleImageName":@"符号 双子",
+                        @"titleImageNameA":@"双子-星座",
+                        @"transparentImageName":@"双子座",
+                        @"dateString":@"05/21 ~ 06/20",
+                        @"zodiacIndex":@"3",
+                        @"backgroundImage":@"风象星座",
+                        @"colorHexNum":@"0x8F6ECC"},
+                      @{@"imageName":@"巨蟹座_topImage",
+//                          @"imageName":@"dailyCancer",
+                        @"zodiacName":@"Cancer",
+                        @"titleImageName":@"符号 巨蟹",
+                        @"titleImageNameA":@"巨蟹-星座",
+                        @"transparentImageName":@"巨蟹座",
+                        @"dateString":@"06/21 ~ 07/22",
+                        @"zodiacIndex":@"4",
+                        @"backgroundImage":@"水象星座",
+                        @"colorHexNum":@"0xE84E44"},
+                      @{@"imageName":@"狮子座_topImage",
+//                          @"imageName":@"dailyLeo",
+                        @"zodiacName":@"Leo",
+                        @"titleImageName":@"符号 狮子",
+                        @"titleImageNameA":@"狮子-星座",
+                        @"transparentImageName":@"狮子座",
+                        @"dateString":@"07/23 ~ 08/22",
+                        @"zodiacIndex":@"5",
+                        @"backgroundImage":@"火象星座",
+                        @"colorHexNum":@"0xFF8400"},
+                      @{@"imageName":@"处女座_topImage",
+//                          @"imageName":@"dailyVirgo",
+                        @"zodiacName":@"Virgo",
+                        @"titleImageName":@"符号 处女",
+                        @"titleImageNameA":@"处女-星座",
+                        @"transparentImageName":@"处女座",
+                        @"dateString":@"08/23 ~ 09/22",
+                        @"zodiacIndex":@"6",
+                        @"backgroundImage":@"土象星座",
+                        @"colorHexNum":@"0xC50CEE"},
+                      @{@"imageName":@"天秤座_topImage",
+                          //@"imageName":@"dailyLibra",
+                        @"zodiacName":@"Libra",
+                        @"titleImageName":@"符号 天枰",
+                        @"titleImageNameA":@"天秤-星座",
+                        @"transparentImageName":@"天秤座",
+                        @"dateString":@"09/23 ~ 10/22",
+                        @"zodiacIndex":@"7",
+                        @"backgroundImage":@"风象星座",
+                        @"colorHexNum":@"0x3FB0AA"},
+                      @{@"imageName":@"天蝎座_topImage",
+//                          @"imageName":@"dailyScorpio",
+                        @"zodiacName":@"Scorpio",
+                        @"titleImageName":@"符号 天蝎",
+                        @"titleImageNameA":@"天蝎-星座",
+                        @"transparentImageName":@"天蝎座",
+                        @"dateString":@"10/23 ~ 11/21",
+                        @"zodiacIndex":@"8",
+                        @"backgroundImage":@"水象星座",
+                        @"colorHexNum":@"0xDB3F77"},
+                      @{@"imageName":@"射手座_topImage",
+//                          @"imageName":@"dailySagittarius",
+                        @"zodiacName":@"Sagittarius",
+                        @"titleImageName":@"符号 射手",
+                        @"titleImageNameA":@"射手-星座",
+                        @"transparentImageName":@"射手座",
+                        @"dateString":@"11/22 ~ 12/21",
+                        @"zodiacIndex":@"9",
+                        @"backgroundImage":@"火象星座",
+                        @"colorHexNum":@"0x617CFF"},
+                      @{@"imageName":@"摩羯座_topImage",
+//                          @"imageName":@"dailyCapricorn",
+                        @"zodiacName":@"Capricorn",
+                        @"titleImageName":@"符号 山羊",
+                        @"titleImageNameA":@"摩羯-星座",
+                        @"transparentImageName":@"摩羯座",
+                        @"dateString":@"12/22 ~ 01/19",
+                        @"zodiacIndex":@"10",
+                        @"backgroundImage":@"土象星座",
+                        @"colorHexNum":@"0xB1B622"},
+                      @{@"imageName":@"水瓶座_topImage",
+//                          @"imageName":@"dailyAquarius",
+                        @"zodiacName":@"Aquarius",
+                        @"titleImageName":@"符号 水瓶",
+                        @"titleImageNameA":@"水瓶-星座",
+                        @"transparentImageName":@"水瓶座",
+                        @"dateString":@"01/20 ~ 02/18",
+                        @"zodiacIndex":@"11",
+                        @"backgroundImage":@"风象星座",
+                        @"colorHexNum":@"0x1EA9EE"},
+                      @{@"imageName":@"双鱼座_topImage",
+//                          @"imageName":@"dailyPisces",
+                        @"zodiacName":@"Pisces",
+                        @"titleImageName":@"符号 双鱼",
+                        @"titleImageNameA":@"双鱼-星座",
+                        @"transparentImageName":@"双鱼座",
+                        @"dateString":@"02/19 ~ 03/20",
+                        @"zodiacIndex":@"12",
+                        @"backgroundImage":@"水象星座",
+                        @"colorHexNum":@"0xED5E99"},
+                      ];
+    NSArray* arr = [TTZodiacItemModel mj_objectArrayWithKeyValuesArray:dict];
+    return arr;
+}
+@end
+
+
+/*  ,@{@"imageName":@"dailyAries",
+ @"zodiacName":@"Aries",
+ @"titleImageName":@"符号 牧羊",
+ @"dateString":@"03/21 ~ 04/19",
+ @"zodiacIndex":@"1",
+ @"colorHexNum":@"0x3FB933"},
+ @{@"imageName":@"dailyTaurus",
+ @"zodiacName":@"Taurus",
+ @"titleImageName":@"符号 金牛",
+ @"dateString":@"04/20 ~ 05/20",
+ @"zodiacIndex":@"2",
+ @"colorHexNum":@"0xD2B000"},
+ @{@"imageName":@"dailyGemini",
+ @"zodiacName":@"Gemini",
+ @"titleImageName":@"符号 双子",
+ @"dateString":@"05/21 ~ 06/21",
+ @"zodiacIndex":@"3",
+ @"colorHexNum":@"0x8F6ECC"},
+ @{@"imageName":@"dailyCancer",
+ @"zodiacName":@"Cancer",
+ @"titleImageName":@"符号 巨蟹",
+ @"dateString":@"06/22 ~ 07/22",
+ @"zodiacIndex":@"4",
+ @"colorHexNum":@"0xE84E44"},
+ @{@"imageName":@"dailyLeo",
+ @"zodiacName":@"Leo",
+ @"titleImageName":@"符号 狮子",
+ @"dateString":@"07/23 ~ 08/22",
+ @"zodiacIndex":@"5",
+ @"colorHexNum":@"0xFF8400"},
+ @{@"imageName":@"dailyVirgo",
+ @"zodiacName":@"Virgo",
+ @"titleImageName":@"符号 处女",
+ @"dateString":@"08/23 ~ 09/22",
+ @"zodiacIndex":@"6",
+ @"colorHexNum":@"0xC50CEE"},
+ @{@"imageName":@"dailyLibra",
+ @"zodiacName":@"Libra",
+ @"titleImageName":@"符号 天枰",
+ @"dateString":@"09/23 ~ 10/23",
+ @"zodiacIndex":@"7",
+ @"colorHexNum":@"0x3FB0AA"},
+ @{@"imageName":@"dailyScorpio",
+ @"zodiacName":@"Scorpio",
+ @"titleImageName":@"符号 天蝎",
+ @"dateString":@"10/24 ~ 11/22",
+ @"zodiacIndex":@"8",
+ @"colorHexNum":@"0xDB3F77"},
+ @{@"imageName":@"dailySagittarius",
+ @"zodiacName":@"Sagittarius",
+ @"titleImageName":@"符号 射手",
+ @"dateString":@"11/23 ~ 12/21",
+ @"zodiacIndex":@"9",
+ @"colorHexNum":@"0x617CFF"},
+ @{@"imageName":@"dailyCapricorn",@"zodiacName":@"Capricorn",@"titleImageName":@"符号 山羊",@"dateString":@"12/22 ~ 01/19",@"zodiacIndex":@"10", @"colorHexNum":@"0xB1B622"},
+ @{@"imageName":@"dailyAquarius",@"zodiacName":@"Aquarius",@"titleImageName":@"符号 水瓶",@"dateString":@"01/20 ~ 02/18",@"zodiacIndex":@"11", @"colorHexNum":@"0x1EA9EE"},
+ @{@"imageName":@"dailyPisces",@"zodiacName":@"Pisces",@"titleImageName":@"符号 双鱼",@"dateString":@"02/19 ~ 03/20",@"zodiacIndex":@"12", @"colorHexNum":@"0xED5E99"},
+ 
+ @{@"imageName":@"dailyAries",@"zodiacName":@"Aries",@"titleImageName":@"符号 牧羊",@"dateString":@"03/21 ~ 04/19",@"zodiacIndex":@"1", @"colorHexNum":@"0x3FB933"},
+ @{@"imageName":@"dailyTaurus",@"zodiacName":@"Taurus",@"titleImageName":@"符号 金牛",@"dateString":@"04/20 ~ 05/20",@"zodiacIndex":@"2", @"colorHexNum":@"0xD2B000"},
+ @{@"imageName":@"dailyGemini",@"zodiacName":@"Gemini",@"titleImageName":@"符号 双子",@"dateString":@"05/21 ~ 06/21",@"zodiacIndex":@"3", @"colorHexNum":@"0x8F6ECC"},
+ @{@"imageName":@"dailyCancer",@"zodiacName":@"Cancer",@"titleImageName":@"符号 巨蟹",@"dateString":@"06/22 ~ 07/22",@"zodiacIndex":@"4", @"colorHexNum":@"0xE84E44"},
+ @{@"imageName":@"dailyLeo",@"zodiacName":@"Leo",@"titleImageName":@"符号 狮子",@"dateString":@"07/23 ~ 08/22",@"zodiacIndex":@"5", @"colorHexNum":@"0xFF8400"},
+ @{@"imageName":@"dailyVirgo",@"zodiacName":@"Virgo",@"titleImageName":@"符号 处女",@"dateString":@"08/23 ~ 09/22",@"zodiacIndex":@"6", @"colorHexNum":@"0xC50CEE"},
+ @{@"imageName":@"dailyLibra",@"zodiacName":@"Libra",@"titleImageName":@"符号 天枰",@"dateString":@"09/23 ~ 10/23",@"zodiacIndex":@"7", @"colorHexNum":@"0x3FB0AA"},
+ @{@"imageName":@"dailyScorpio",@"zodiacName":@"Scorpio",@"titleImageName":@"符号 天蝎",@"dateString":@"10/24 ~ 11/22",@"zodiacIndex":@"8", @"colorHexNum":@"0xDB3F77"},
+ @{@"imageName":@"dailySagittarius",@"zodiacName":@"Sagittarius",@"titleImageName":@"符号 射手",@"dateString":@"11/23 ~ 12/21",@"zodiacIndex":@"9", @"colorHexNum":@"0x617CFF"},
+ @{@"imageName":@"dailyCapricorn",@"zodiacName":@"Capricorn",@"titleImageName":@"符号 山羊",@"dateString":@"12/22 ~ 01/19",@"zodiacIndex":@"10", @"colorHexNum":@"0xB1B622"},
+ @{@"imageName":@"dailyAquarius",@"zodiacName":@"Aquarius",@"titleImageName":@"符号 水瓶",@"dateString":@"01/20 ~ 02/18",@"zodiacIndex":@"11", @"colorHexNum":@"0x1EA9EE"},
+ @{@"imageName":@"dailyPisces",@"zodiacName":@"Pisces",@"titleImageName":@"符号 双鱼",@"dateString":@"02/19 ~ 03/20",@"zodiacIndex":@"12", @"colorHexNum":@"0xED5E99"}*/
